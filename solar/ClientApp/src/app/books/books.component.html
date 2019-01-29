@@ -1,0 +1,12 @@
+<h1 class="mat-headline">Books related to Solar Energy</h1>
+<div class="flex-container">
+  <mat-card class="card product-card" *ngFor="let book of Books">
+    <a href="{{book.Href}}" target="_blank" rel="nofollow">
+      <div class="mat-body-2">{{book.Name}}</div>
+      <div class="mat-small">{{book.Summary}}</div>
+      <img class="book-img" src="{{book.Img}}" alt="{{book.Name}}" matTooltip="{{book.Name}} - {{book.Summary}}"/>
+    </a>
+    <div>By {{book.Author}}</div>
+    <code>{{book.Price}}</code>
+  </mat-card>
+</div>

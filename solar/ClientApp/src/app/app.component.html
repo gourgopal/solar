@@ -1,0 +1,25 @@
+<div class="evng-container">
+  <mat-toolbar style="background-color:#ffbb00;" class="fixed-topnav mat-elevation-z6">
+    <button aria-label="Menu Button" mat-icon-button (click)="snav.toggle()" matTooltip="See More"><mat-icon>menu</mat-icon></button>
+    <button aria-label="Home Page" mat-button routerLink="." matTooltip="SD Solar Energy">SD Solar Energy</button>
+    <span class="spacer"></span>
+    <a mat-icon-button href="https://goo.gl/maps/72Y7tGV9CEF2" rel="nofollow" target="_blank" matTooltip="Locate us on Map"><mat-icon>place</mat-icon></a>
+    <a mat-icon-button href="mailto:sdsolare@gmail.com" matTooltip="Email"><mat-icon>mail</mat-icon></a>
+    <a mat-icon-button href="tel:+917655852495" matTooltip="Call"><mat-icon>call</mat-icon></a>
+  </mat-toolbar>
+  <mat-sidenav-container class="evng-sidenav-container">
+    <mat-sidenav #snav mode="push" opened="false" fixedInViewport="true" fixedTopGap="56" class="mat-elevation-z1">
+      <mat-nav-list>
+        <a mat-list-item (click)="snav.toggle()" routerLink="." matTooltip="Home page">Home</a>
+        <a mat-list-item (click)="snav.toggle()" routerLink="./products" matTooltip="Info about the Products">Products</a>
+        <a mat-list-item (click)="snav.toggle();openBottomSheet()" routerLink="./contact" matTooltip="Contact us">Contact Us</a>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>Other References</h3>
+        <a mat-list-item (click)="snav.toggle()" routerLink="./books" matTooltip="Books on Solar Energy">Books</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,22 @@
+<h1 class="mat-headline">Products</h1>
+<p class="mat-caption">Products are subject to availability. Images shown here are for informational purposes and may differ with original product</p>
+
+<div style="display: flex; flex-wrap: wrap;padding:5px;">
+  <mat-card class="card product-card" *ngFor="let p of Products">
+    <mat-card-header>
+      <div style="background-size: cover;" mat-card-avatar><mat-icon matSuffix>wb_sunny</mat-icon></div>
+      <mat-card-title>{{p.Name}}</mat-card-title>
+      <mat-card-subtitle>{{p.Description}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{p.img_src}}" alt="Photo of {{p.Name}}">
+    <mat-card-content>
+      <p>
+        {{p.Description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a aria-label="Enquire Button" mat-button href="https://goo.gl/forms/aiXiCFLPrCPQjwz13" target="_blank">ENQUIRE</a>
+      <button aria-label="Share Button" mat-button (click)="openBottomSheet()">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

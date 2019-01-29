@@ -1,0 +1,41 @@
+<h1 class="mat-headline">Contact Us</h1>
+<p class="mat-subheading-1">Feel free to contact us between 8 AM to 8 PM</p>
+
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" matTooltip="Email us at sdsolare@gmail.com (click to open)"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Email
+      </mat-panel-title>
+      <mat-panel-description>
+        {{panelOpenState ? 'Email us with contact number' : 'sdsolare@gmail.com'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    Any Enquiry: <a href="mailto:sdsolare@gmail.com?subject=Equiry about Solar Products&body=Hi, I am interested to know more about Solar Products, and my contact number is ">sdsolare@gmail.com</a>
+  </mat-expansion-panel>
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-expansion-panel matTooltip="Enquiry form (click to open)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Enquiry
+      </mat-panel-title>
+      <mat-panel-description>
+        Send us Message
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddIh6dctu1TUogC1a_sYxLUPxLi4udJl9MWBa6s44z4OtQYg/viewform?embedded=true" scrolling="yes" class="map-iframe" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-2">Contact us for more info:</p>
+<address>
+  SD Solar Energy,
+  Kainsir Road, Ainthapali,
+  Sambalpur 768 004,
+  Odisha, IN<br />
+  <a href="tel:+917655852495" matTooltip="Call">076558 52495</a><br />
+  <a class="mat-body-2" href="mailto:sdsolare@gmail.com" matTooltip="Email">sdsolare@gmail.com</a>
+</address>
+<a class="mat-body-2" href="https://goo.gl/maps/72Y7tGV9CEF2" rel="nofollow" target="_blank" matTooltip="See on Google Maps">Google Maps (View larger map)</a>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.1371566307535!2d83.98261451442686!3d21.502346985743802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a21172561ce5153%3A0xda39b3ebe42b9c5e!2sSD+Solar+Energy!5e0!3m2!1sen!2sin!4v1540540476339" class="map-iframe" frameborder="0" style="border:0" allowfullscreen>Loading Map...</iframe>
